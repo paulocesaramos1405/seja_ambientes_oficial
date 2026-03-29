@@ -1,0 +1,142 @@
+.portfolio {
+  padding: 8rem 5vw 5rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--dark);
+  margin-top: 0.5rem;
+}
+
+/* ── FILTERS ── */
+.filters {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.filterBtn {
+  padding: 8px 22px;
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mid);
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+  background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
+}
+
+/* ── GRID ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+}
+
+.item.large {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+.item img {
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.item:hover img {
+  transform: scale(1.06);
+}
+
+/* ── OVERLAY ── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.72);
+  opacity: 0;
+  transition: opacity var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+
+.overlay p {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.viewBtn {
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 20px;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.viewBtn:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item.large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 540px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item.large {
+    grid-column: span 1;
+    aspect-ratio: 4 / 3;
+  }
+}

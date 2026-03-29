@@ -1,0 +1,211 @@
+/* ── HERO ── */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 5vw 8vh;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(160deg, rgba(26, 26, 26, 0.65) 0%, rgba(155, 28, 28, 0.18) 100%),
+    url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=80') center / cover no-repeat;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  color: var(--white);
+}
+
+.heroEyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.75;
+  margin-bottom: 1.2rem;
+}
+
+.heroTitle {
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 6vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.6rem;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: #e8a0a0;
+}
+
+.heroSub {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.85;
+  max-width: 460px;
+  margin-bottom: 2.4rem;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroScroll {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 5vw;
+  z-index: 1;
+  writing-mode: vertical-rl;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.heroScroll::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.35);
+  animation: scrollLine 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.4); }
+  50%       { opacity: 1;   transform: scaleY(1); }
+}
+
+/* ── ABOUT STRIP ── */
+.aboutStrip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+
+.aboutImg {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+}
+
+.aboutImg img {
+  height: 100%;
+}
+
+.aboutText {
+  background: var(--dark);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 6vw;
+}
+
+.aboutText h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.aboutText p {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  opacity: 0.75;
+  margin-bottom: 1rem;
+}
+
+.stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.statNum {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--red);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-top: 0.3rem;
+}
+
+/* ── SERVICES ── */
+.services {
+  padding: 6rem 5vw;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* ── CTA STRIP ── */
+.ctaStrip {
+  background: var(--red);
+  padding: 5rem 5vw;
+  text-align: center;
+}
+
+.ctaEyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.8rem;
+}
+
+.ctaTitle {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: var(--white);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .aboutStrip {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutImg {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+}
