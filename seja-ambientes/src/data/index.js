@@ -1,69 +1,76 @@
+import cozinha from '../assets/cozinha.jpeg'
+import banheiro from '../assets/banheiro.jpeg'
+import cadeira from '../assets/cadeira.jpeg'
+import centauro from '../assets/centauro.jpeg'
+import sala from '../assets/sala.jpeg'
+import subway from '../assets/subway.jpeg'
+import espelho from '../assets/espelho.jpeg'
+import mesa from '../assets/mesa.jpeg'
+
+
+
+
 // ── PROJECTS DATA ──
 export const projects = [
   {
     id: 1,
-    title: 'Cozinha Contemporânea',
-    category: 'cozinha',
-    location: 'Residencial · Fortaleza',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=80',
+    title: 'Subway',
+    category: 'escritorio',
+    location: 'North Shoppping · Fortaleza',
+    image: subway,
     large: true,
   },
   {
     id: 2,
-    title: 'Suite Master',
-    category: 'dormitorio',
+    title: 'Centauro',
+    category: 'escritorio',
     location: 'Residencial · Fortaleza',
-    image: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80',
+    image: centauro,
   },
   {
     id: 3,
     title: 'Sala Integrada',
     category: 'sala',
-    location: 'Residencial · Caucaia',
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80',
+    location: 'Residencial · Fortaleza',
+    image: sala,
   },
   {
     id: 4,
-    title: 'Home Office Premium',
+    title: 'Salão de beleza',
     category: 'escritorio',
     location: 'Comercial · Fortaleza',
-    image: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80',
+    image: espelho,
   },
   {
     id: 5,
-    title: 'Closet com Iluminação',
-    category: 'dormitorio',
+    title: 'Banheiro aconchegante',
+    category: 'banheiro',
     location: 'Residencial · Fortaleza',
-    image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80',
+    image: banheiro,
   },
   {
     id: 6,
-    title: 'Sala de Jantar Clássica',
-    category: 'sala',
+    title: 'Bancada Sofisticada',
+    category: 'cozinha',
     location: 'Residencial · Eusébio',
-    image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=900&q=80',
+    image: cozinha,
+    large: true,
+  },
+  {
+    id: 6,
+    title: 'Bancada Sofisticada',
+    category: 'cozinha',
+    location: 'Residencial · Eusébio',
+    image: mesa,
     large: true,
   },
   {
     id: 7,
-    title: 'Cozinha Industrial',
+    title: 'Cadeiras Modernas',
     category: 'cozinha',
-    location: 'Comercial · Fortaleza',
-    image: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=600&q=80',
-  },
-  {
-    id: 8,
-    title: 'Escritório Corporativo',
-    category: 'escritorio',
-    location: 'Comercial · Fortaleza',
-    image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=80',
-  },
-  {
-    id: 9,
-    title: 'Quarto Infantil',
-    category: 'dormitorio',
-    location: 'Residencial · Maracanaú',
-    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80',
+    location: 'Residencial · Eusébio',
+    image: cadeira,
+    large: true,
   },
 ];
 
@@ -71,39 +78,63 @@ export const projects = [
 export const carouselSlides = [
   {
     id: 1,
-    title: 'Cozinha Planejada',
-    subtitle: 'Projeto Residencial · 2024',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80',
+    title: 'Subway',
+    category: 'escritorio',
+    location: 'North Shoppping · Fortaleza',
+    image: subway,
+    large: true,
   },
   {
     id: 2,
-    title: 'Sala de Estar',
-    subtitle: 'Projeto Residencial · 2024',
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80',
+    title: 'Centauro',
+    category: 'escritorio',
+    location: 'Residencial · Fortaleza',
+    image: centauro,
   },
   {
     id: 3,
-    title: 'Dormitório Master',
-    subtitle: 'Projeto Residencial · 2024',
-    image: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80',
+    title: 'Sala Integrada',
+    category: 'sala',
+    location: 'Residencial · Fortaleza',
+    image: sala,
   },
   {
     id: 4,
-    title: 'Home Office',
-    subtitle: 'Projeto Comercial · 2024',
-    image: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80',
+    title: 'Salão de beleza',
+    category: 'escritorio',
+    location: 'Comercial · Fortaleza',
+    image: espelho,
   },
   {
     id: 5,
-    title: 'Closet Sob Medida',
-    subtitle: 'Projeto Residencial · 2023',
-    image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80',
+    title: 'Banheiro aconchegante',
+    category: 'banheiro',
+    location: 'Residencial · Fortaleza',
+    image: banheiro,
   },
   {
     id: 6,
-    title: 'Sala de Jantar',
-    subtitle: 'Projeto Residencial · 2023',
-    image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=80',
+    title: 'Bancada Sofisticada',
+    category: 'cozinha',
+    location: 'Residencial · Eusébio',
+    image: cozinha,
+    large: true,
+  },
+  {
+    id: 6,
+    title: 'Bancada Sofisticada',
+    category: 'cozinha',
+    location: 'Residencial · Eusébio',
+    image: mesa,
+    large: true,
+  },
+  {
+    id: 7,
+    title: 'Cadeiras Modernas',
+    category: 'cozinha',
+    location: 'Residencial · Eusébio',
+    image: cadeira,
+    large: true,
   },
 ];
 
